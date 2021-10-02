@@ -1,5 +1,5 @@
 {% set name = "tensorflow-lattice" %}
-{% set version = "2.0.8" %}
+{% set version = "2.0.9" %}
 
 
 package:
@@ -8,10 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tensorflow_lattice-{{ version }}.tar.gz
-  sha256: 68ba98a98e8f73de1c1f63d31e40a1308b53214c860fe96d39a28b485e9adaeb
-  patches:
-    # https://github.com/tensorflow/lattice/pull/68
-    - 0001-setup.py-fix-sklearn-scikit-learn.patch
+  sha256: 08a2e5765859cfb8c2b75c47c385f6885ad1d8ea30d7f64647d636923ccf4a60
 
 build:
   number: 0
