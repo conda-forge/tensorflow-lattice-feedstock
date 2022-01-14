@@ -29,7 +29,7 @@ requirements:
     - matplotlib-base
     - python-graphviz
     - dm-sonnet
-    - tensorflow >=2
+    - tensorflow >2.4.1  # Dependencies in 2.4.1 seem incorrectly pinned, so try to avoid this version.
 
 test:
   imports:
