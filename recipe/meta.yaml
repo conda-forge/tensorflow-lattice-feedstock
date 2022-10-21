@@ -1,7 +1,6 @@
 {% set name = "tensorflow-lattice" %}
 {% set version = "2.0.11" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -11,9 +10,10 @@ source:
   sha256: a02d9b28a657c0f862a21a60691b79374733d15eb58ab0a4acb14ba144244ab5
 
 build:
-  number: 0
   noarch: python
+  # --install-option="--release" is required since setup.py defaults to nightly release
   script: {{ PYTHON }} -m pip install . -vv --install-option="--release"
+  number: 0
 
 requirements:
   host:
@@ -28,13 +28,15 @@ requirements:
     - scikit-learn
     - matplotlib-base
     - python-graphviz
+    # Depends on tensorflow:
     - dm-sonnet
-    - tensorflow >=2.6  # Dependencies are correctly pinned as of 2.6.0, so avoid previous versions.
+    # Dependencies are correctly pinned as of tf 2.6.0, so avoid previous versions:
+    # What exactly did I mean with this comment?
+    - tensorflow >=2.6
 
 test:
   imports:
     - tensorflow_lattice
-    - tensorflow_lattice.layers
   commands:
     - pip check
   requires:
