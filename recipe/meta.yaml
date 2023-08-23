@@ -11,8 +11,7 @@ source:
 
 build:
   noarch: python
-  # --install-option="--release" is required since setup.py defaults to nightly release
-  script: {{ PYTHON }} -m pip install . -vv --install-option="--release"
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
@@ -28,8 +27,6 @@ requirements:
     - scikit-learn
     - matplotlib-base
     - python-graphviz
-    # Depends on tensorflow:
-    - dm-sonnet
     # Dependencies are correctly pinned as of tf 2.6.0, so avoid previous versions:
     # What exactly did I mean with this comment?
     - tensorflow >=2.6
