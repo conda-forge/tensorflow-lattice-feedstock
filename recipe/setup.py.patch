@@ -1,0 +1,21 @@
+diff --git a/setup.py b/setup.py
+index 983a01e..438a15f 100644
+--- a/setup.py
++++ b/setup.py
+@@ -35,7 +35,6 @@ if "--release" in sys.argv:
+ else:
+   # Build a nightly package by default.
+   _name = "tensorflow_lattice_nightly"
+-  __version__ += datetime.datetime.now().strftime(".dev%Y%m%d")
+ 
+ _install_requires = [
+     "absl-py",
+@@ -84,7 +83,7 @@ into custom models.
+ """
+ 
+ setup(
+-    name=_name,
++    name="tensorflow_lattice",
+     version=__version__,
+     author="Google Inc.",
+     author_email="no-reply@google.com",
