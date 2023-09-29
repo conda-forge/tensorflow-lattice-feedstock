@@ -1,5 +1,5 @@
 {% set name = "tensorflow-lattice" %}
-{% set version = "2.0.12" %}
+{% set version = "2.0.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tensorflow_lattice-{{ version }}.tar.gz
-  sha256: 363e566f0792463622b612c2b7e166000670d646fc16e34f9a074ab9e8879ca0
+  sha256: 207a56b9e085876952b654ef410d1b9c8223cd097fdb7cdaf00afcc0437a0f39
   patches:
     - setup.py.patch
 
