@@ -1,5 +1,5 @@
 {% set name = "tensorflow-lattice" %}
-{% set version = "2.0.13" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tensorflow_lattice-{{ version }}.tar.gz
-  sha256: 207a56b9e085876952b654ef410d1b9c8223cd097fdb7cdaf00afcc0437a0f39
+  sha256: 84e968d26443e1263b80bb5fe265ce7c9bf19b00599c074397d9c0aad5360658
   patches:
     - setup.py.patch
 
@@ -29,9 +29,7 @@ requirements:
     - scikit-learn
     - matplotlib-base
     - python-graphviz
-    # Dependencies are correctly pinned as of tf 2.6.0, so avoid previous versions:
-    # What exactly did I mean with this comment?
-    - tensorflow >=2.6
+    - tf-keras
 
 test:
   imports:
