@@ -29,9 +29,7 @@ requirements:
     - scikit-learn
     - matplotlib-base
     - python-graphviz
-    # Dependencies are correctly pinned as of tf 2.6.0, so avoid previous versions:
-    # What exactly did I mean with this comment?
-    - tensorflow >=2.6
+    - tf-keras
 
 test:
   imports:
