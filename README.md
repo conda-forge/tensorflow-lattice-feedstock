@@ -3,11 +3,13 @@ About tensorflow-lattice-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tensorflow-lattice-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/tensorflow/lattice
+Home: https://pypi.org/project/tensorflow-lattice/
 
 Package license: Apache-2.0
 
 Summary: A library that implements optionally monotonic lattice based models.
+
+Development: https://github.com/tensorflow/lattice
 
 Current build status
 ====================
@@ -143,5 +145,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@ehfd](https://github.com/ehfd/)
 * [@maresb](https://github.com/maresb/)
 
